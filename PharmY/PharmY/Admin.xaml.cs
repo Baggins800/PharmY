@@ -26,7 +26,7 @@ namespace PharmY
 
         private void btnadd_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window3(); //create your new form add barcode.
+            var newForm = new AddBarcode(); //create your new form add barcode.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }

@@ -65,6 +65,9 @@
     <Compile Include="Add Barcode.xaml.cs">
       <DependentUpon>Add Barcode.xaml</DependentUpon>
     </Compile>
+    <Compile Include="lol.xaml.cs">
+      <DependentUpon>lol.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Remove Barcode.xaml.cs">
       <DependentUpon>Remove Barcode.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,10 @@
     <Compile Include="search_active_ingridient.xaml.cs">
       <DependentUpon>search_active_ingridient.xaml</DependentUpon>
     </Compile>
+    <Page Include="lol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

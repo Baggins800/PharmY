@@ -21,9 +21,9 @@ namespace PharmY
     /// <summary>
     /// Interaction logic for Window3.xaml
     /// </summary>
-    public partial class Window3 : Window
+    public partial class AddBarcode : Window
     {
-        public Window3()
+        public AddBarcode()
         {
             InitializeComponent();
         }
@@ -58,6 +58,11 @@ namespace PharmY
                     catch (Exception enq) { MessageBox.Show(enq.Message); }
 
                 }
+        }
+
+        private void btnaddbarcode_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
