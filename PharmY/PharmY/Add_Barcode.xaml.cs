@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PharmY
 {
     /// <summary>
-    /// Interaction logic for Window4.xaml
+    /// Interaction logic for Window3.xaml
     /// </summary>
-    public partial class Window4 : Window
+    public partial class Window3 : Window
     {
-        public Window4()
+        public Window3()
         {
             InitializeComponent();
         }

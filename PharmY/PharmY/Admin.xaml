@@ -15,6 +15,7 @@
         <Button x:Name="btnremove" Content="Remove Barcode" HorizontalAlignment="Left" Margin="42,57,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Click="btnremove_Click"/>
         <Button x:Name="btnaddactive" Content="Add Active Ingredient" HorizontalAlignment="Left" Margin="42,94,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Click="btnaddactive_Click"/>
         <Button x:Name="btnremoveactive" Content="Remove Active Ingredient" HorizontalAlignment="Left" Margin="42,134,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Click="btnremoveactive_Click"/>
+        <Button Content="back to main" Grid.Column="1" HorizontalAlignment="Left" Margin="135,207,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>

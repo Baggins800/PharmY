@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace PharmY
 {
     /// <summary>
-    /// Interaction logic for Window4.xaml
+    /// Interaction logic for Window6.xaml
     /// </summary>
-    public partial class Window4 : Window
+    public partial class Window6 : Window
     {
-        public Window4()
+        public Window6()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var newForm = new Window1(); //create your new form admin.
-            newForm.Show(); //show the new form.
-            this.Close(); //only if you want to close the current form
         }
     }
 }
