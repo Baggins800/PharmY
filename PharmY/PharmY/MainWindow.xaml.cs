@@ -27,14 +27,14 @@ namespace PharmY
 
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window1(); //create your new form.
+            var newForm = new Window1(); //create your new form admin.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
 
         private void btnhospital_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window2(); //create your new form.
+            var newForm = new Window2(); //create your new form hospital.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
