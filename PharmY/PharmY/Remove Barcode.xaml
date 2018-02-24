@@ -10,7 +10,7 @@
         <Button x:Name="btnremovebarcode" Content="Back to Admin" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
         <Label x:Name="lblbarcode" Content="Barcode" HorizontalAlignment="Left" Margin="65,58,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="edtbarcode" HorizontalAlignment="Left" Height="23" Margin="158,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnremovebarcode1" Content="Remove Barcode" HorizontalAlignment="Left" Margin="97,144,0,0" VerticalAlignment="Top" Width="126"/>
+        <Button x:Name="btnremovebarcode1" Content="Remove Barcode" HorizontalAlignment="Left" Margin="97,144,0,0" VerticalAlignment="Top" Width="126" Click="btnremovebarcode1_Click"/>
 
     </Grid>
 </Window>

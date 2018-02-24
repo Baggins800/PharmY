@@ -10,7 +10,7 @@
         <Button Content="Back to admin" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
         <Label x:Name="lblactivename" Content="Active Ingridient Name" HorizontalAlignment="Left" Margin="67,56,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="edtactivename" HorizontalAlignment="Left" Height="23" Margin="232,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnremoveactive" Content="Remove active Ingridient" HorizontalAlignment="Left" Margin="110,149,0,0" VerticalAlignment="Top" Width="148"/>
+        <Button x:Name="btnremoveactive" Content="Remove active Ingridient" HorizontalAlignment="Left" Margin="110,149,0,0" VerticalAlignment="Top" Width="148" Click="btnremoveactive_Click"/>
 
     </Grid>
 </Window>

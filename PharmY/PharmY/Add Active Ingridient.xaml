@@ -16,9 +16,12 @@
         <Button Content="Back to admin" Grid.Column="1" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
         <Label x:Name="lblactiveingridientname" Content="Active Ingridient Name" Grid.Column="1" HorizontalAlignment="Left" Margin="23,41,0,0" VerticalAlignment="Top" Height="26" Width="145"/>
         <Label x:Name="lblbarcode" Content="Barcode" Grid.Column="1" HorizontalAlignment="Left" Margin="23,97,0,0" VerticalAlignment="Top" Height="26" Width="53"/>
+
         <TextBox x:Name="edtactivename" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="208,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="edtbarcode" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="208,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnaddactive" Content="Add Active" Grid.Column="1" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Button x:Name="btnaddactive" Content="Add Active" Grid.Column="1" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="btnaddactive_Click"/>
+
+
 
     </Grid>
 </Window>
