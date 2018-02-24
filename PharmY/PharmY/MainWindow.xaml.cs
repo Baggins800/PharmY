@@ -41,7 +41,7 @@ namespace PharmY
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            this.Close();
         }
 
         private void btnsearch_Click(object sender, RoutedEventArgs e)
