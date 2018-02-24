@@ -38,5 +38,17 @@ namespace PharmY
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void btnsearch_Click(object sender, RoutedEventArgs e)
+        {
+            var newForm = new Window7(); //create your new form search active ingridient.
+            newForm.Show(); //show the new form.
+            this.Close(); //only if you want to close the current form
+        }
     }
 }

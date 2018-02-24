@@ -72,6 +72,9 @@
     <Compile Include="Remove Active Ingridient.xaml.cs">
       <DependentUpon>Remove Active Ingridient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="search_active_ingridient.xaml.cs">
+      <DependentUpon>search_active_ingridient.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -105,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Remove Active Ingridient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="search_active_ingridient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

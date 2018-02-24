@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid Margin="0,0,-672,-64">
         <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Left" Margin="87,55,0,0" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
         <Button x:Name="btnhospital" Content="Hospital" HorizontalAlignment="Left" Margin="87,99,0,0" VerticalAlignment="Top" Width="75" Click="btnhospital_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="387,241,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Left" Margin="87,145,0,0" VerticalAlignment="Top" Width="164" Click="btnsearch_Click"/>
 
     </Grid>
 </Window>
