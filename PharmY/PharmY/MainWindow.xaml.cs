@@ -27,14 +27,14 @@ namespace PharmY
 
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window1(); //create your new form admin.
+            var newForm = new Admin(); //create your new form admin.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
 
         private void btnhospital_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window2(); //create your new form hospital.
+            var newForm = new Hospital(); //create your new form hospital.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
@@ -46,7 +46,7 @@ namespace PharmY
 
         private void btnsearch_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window7(); //create your new form search active ingridient.
+            var newForm = new SearchActiveIngridient(); //create your new form search active ingridient.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }

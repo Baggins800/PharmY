@@ -17,9 +17,9 @@ namespace PharmY
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Admin : Window
     {
-        public Window1()
+        public Admin()
         {
             InitializeComponent();
         }
@@ -33,21 +33,21 @@ namespace PharmY
 
         private void btnremove_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window4(); //create your new form remove barcode.
+            var newForm = new RemoveBarcode(); //create your new form remove barcode.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
 
         private void btnaddactive_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window5(); //create your new form add active ingredient.
+            var newForm = new AddActiveIngridient(); //create your new form add active ingredient.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
 
         private void btnremoveactive_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window6(); //create your new form remove active ingridient.
+            var newForm = new RemoveActiveIngridient(); //create your new form remove active ingridient.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }

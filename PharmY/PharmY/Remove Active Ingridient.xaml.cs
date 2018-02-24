@@ -17,16 +17,16 @@ namespace PharmY
     /// <summary>
     /// Interaction logic for Window6.xaml
     /// </summary>
-    public partial class Window6 : Window
+    public partial class RemoveActiveIngridient : Window
     {
-        public Window6()
+        public RemoveActiveIngridient()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var newForm = new Window1(); //create your new form admin.
+            var newForm = new Admin(); //create your new form admin.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }

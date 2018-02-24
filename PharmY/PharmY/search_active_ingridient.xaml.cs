@@ -17,9 +17,9 @@ namespace PharmY
     /// <summary>
     /// Interaction logic for Window7.xaml
     /// </summary>
-    public partial class Window7 : Window
+    public partial class SearchActiveIngridient : Window
     {
-        public Window7()
+        public SearchActiveIngridient()
         {
             InitializeComponent();
         }

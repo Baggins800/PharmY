@@ -1,4 +1,4 @@
-﻿<Window x:Class="PharmY.Window2"
+﻿<Window x:Class="PharmY.Hospital"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,7 +10,7 @@
         <Label x:Name="lblbarcode" Content="Barcode" HorizontalAlignment="Left" Margin="33,98,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="edtbarcode" HorizontalAlignment="Left" Height="23" Margin="120,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ComboBox HorizontalAlignment="Left" Margin="128,54,0,0" VerticalAlignment="Top" Width="87" SelectionChanged="ComboBox_SelectionChanged"/>
-        <DatePicker HorizontalAlignment="Left" Margin="41,15,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="DateHospital" HorizontalAlignment="Left" Margin="41,15,0,0" VerticalAlignment="Top"/>
         <Label Content="Active Ingridient" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="edtactiveingridient" HorizontalAlignment="Left" Height="23" Margin="120,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Quantity" HorizontalAlignment="Left" Margin="22,169,0,0" VerticalAlignment="Top"/>
