@@ -37,29 +37,33 @@ namespace PharmY
 
         private void btnadd_Click(object sender, RoutedEventArgs e)
         {
-            
-            int barcode = 0;
-            if (!Int32.TryParse(edtaddbarcode.Text, out barcode))
+
+        }
+
+        private void btnaddbarcode_Click(object sender, RoutedEventArgs e)
+        {
+
+            int barcode = 0, quantity = 0;
+            if (!Int32.TryParse(edtaddbarcode.Text, out barcode) || !Int32.TryParse(edtquantity.Text, out quantity))
             {
-                MessageBox.Show("Please make sure the barcode is a number.");
+                MessageBox.Show("Please make sure the barcode/quantity is a number.");
             }
             else
                 using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
                 {
-                    //conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Baggins\\Desktop\\PharmY.mdb; Persist Security Info = False; ";
                     OleDbCommand add_barcode = new OleDbCommand();
                     OleDbCommand add_quantity = new OleDbCommand();
                     add_barcode.CommandType = CommandType.Text;
                     add_barcode.CommandText = "insert into ITEMS ([BARCODE_ID],[NAME]) values (?,?);";
                     add_barcode.Parameters.AddWithValue("@BARCODE_ID", barcode);
-                    add_barcode.Parameters.AddWithValue("@NAME", edtaddbarcode.Text);
+                    add_barcode.Parameters.AddWithValue("@NAME", edtaddbarcode.Text.ToUpper());
                     add_barcode.Connection = conn;
 
                     add_quantity.CommandType = CommandType.Text;
                     add_quantity.CommandText = "insert into DATES_ADDED ([BARCODE_ID],[DATE], [QUANTITY]) values (?,?,?);";
                     add_quantity.Parameters.AddWithValue("@BARCODE_ID", barcode);
-                    add_quantity.Parameters.AddWithValue("@DATE", "some date");
-                    add_quantity.Parameters.AddWithValue("@QUANTITY", 5);
+                    add_quantity.Parameters.AddWithValue("@DATE", dateadd.Text);
+                    add_quantity.Parameters.AddWithValue("@QUANTITY", quantity);
                     add_quantity.Connection = conn;
                     conn.Open();
                     try { add_barcode.ExecuteNonQuery(); }
@@ -68,11 +72,6 @@ namespace PharmY
                     catch (Exception enq) { MessageBox.Show(enq.Message); }
 
                 }
-        }
-
-        private void btnaddbarcode_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
