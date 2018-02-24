@@ -5,18 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Admin" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Grid>
+        Title="Admin" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF4BC1A1">
+    <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnadd" Grid.ColumnSpan="2" Content="Add Barcode" HorizontalAlignment="Left" Margin="42,20,0,0" VerticalAlignment="Top" Width="148" Click="btnadd_Click"/>
-        <Button x:Name="btnremove" Content="Remove Barcode" HorizontalAlignment="Left" Margin="42,57,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Click="btnremove_Click"/>
-        <Button x:Name="btnaddactive" Content="Add Active Ingredient" HorizontalAlignment="Left" Margin="42,94,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Click="btnaddactive_Click"/>
-        <Button x:Name="btnremoveactive" Content="Remove Active Ingredient" HorizontalAlignment="Left" Margin="42,134,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Click="btnremoveactive_Click"/>
-        <Button x:Name="btnbacktomain" Content="back to main" Grid.Column="1" HorizontalAlignment="Left" Margin="135,207,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button x:Name="btnreview" Grid.ColumnSpan="2" Content="Review" HorizontalAlignment="Left" Margin="42,181,0,0" VerticalAlignment="Top" Width="148"/>
+        <Button x:Name="btnadd" Content="Add Barcode" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Width="148" Click="btnadd_Click" Height="22"/>
+        <Button x:Name="btnremove" Content="Remove Barcode" HorizontalAlignment="Left" Margin="19,57,0,0" VerticalAlignment="Top" Width="148" Click="btnremove_Click" Height="22"/>
+        <Button x:Name="btnaddactive" Content="Add Active Ingredient" HorizontalAlignment="Left" Margin="19,94,0,0" VerticalAlignment="Top" Width="148" Click="btnaddactive_Click" Height="22"/>
+        <Button x:Name="btnremoveactive" Content="Remove Active Ingredient" HorizontalAlignment="Left" Margin="19,134,0,0" VerticalAlignment="Top" Width="148" Click="btnremoveactive_Click" Height="22"/>
+        <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
+        <Button x:Name="btnreview" Content="Review" HorizontalAlignment="Left" Margin="19,181,0,0" VerticalAlignment="Top" Width="148" Click="btnreview_Click" Height="22"/>
 
     </Grid>
 </Window>

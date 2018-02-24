@@ -58,5 +58,12 @@ namespace PharmY
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form
         }
+
+        private void btnreview_Click(object sender, RoutedEventArgs e)
+        {
+            var newForm = new CreateReview(); //create your new form main window.
+            newForm.Show(); //show the new form.
+            this.Close(); //only if you want to close the current form
+        }
     }
 }

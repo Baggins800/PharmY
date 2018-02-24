@@ -59,6 +59,9 @@
     <Compile Include="Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateReview.xaml.cs">
+      <DependentUpon>CreateReview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Hospital.xaml.cs">
       <DependentUpon>Hospital.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,10 @@
     <Compile Include="search_active_ingridient.xaml.cs">
       <DependentUpon>search_active_ingridient.xaml</DependentUpon>
     </Compile>
+    <Page Include="CreateReview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

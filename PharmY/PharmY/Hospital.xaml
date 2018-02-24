@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Hospital" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Hospital" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF55C5BB">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Label x:Name="lblbarcode" Content="Barcode" HorizontalAlignment="Left" Margin="33,98,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="edtbarcode" HorizontalAlignment="Left" Height="23" Margin="120,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ComboBox HorizontalAlignment="Left" Margin="128,54,0,0" VerticalAlignment="Top" Width="87" SelectionChanged="ComboBox_SelectionChanged"/>
@@ -16,7 +19,7 @@
         <Label Content="Quantity" HorizontalAlignment="Left" Margin="22,169,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="edtquantity" HorizontalAlignment="Left" Height="23" Margin="120,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="out where" HorizontalAlignment="Left" Margin="27,54,0,0" VerticalAlignment="Top"/>
-        <Button Content="Back to main" HorizontalAlignment="Left" Margin="308,249,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Back to main" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
         <Button x:Name="btnaddhospital" Content="Add script" HorizontalAlignment="Left" Margin="109,249,0,0" VerticalAlignment="Top" Width="75"/>
         <ListBox HorizontalAlignment="Left" Height="117" Margin="320,81,0,0" VerticalAlignment="Top" Width="165"/>
         <Label x:Name="lbllist" Content="List of items to go out" HorizontalAlignment="Left" Margin="336,50,0,0" VerticalAlignment="Top"/>

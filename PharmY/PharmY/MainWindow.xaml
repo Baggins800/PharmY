@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Grid Margin="0,0,-672,-64">
-        <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Left" Margin="87,55,0,0" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
-        <Button x:Name="btnhospital" Content="Hospital" HorizontalAlignment="Left" Margin="87,99,0,0" VerticalAlignment="Top" Width="75" Click="btnhospital_Click"/>
-        <Button x:Name="btncloseprogram" Content="Close program" HorizontalAlignment="Left" Margin="387,241,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Left" Margin="87,145,0,0" VerticalAlignment="Top" Width="164" Click="btnsearch_Click"/>
+        Title="MainWindow" Height="369" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF66D427">
+    <Grid Margin="0,0,2,1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Left" Margin="310,115,0,0" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click" Height="22"/>
+        <Button x:Name="btnhospital" Content="Hospital" HorizontalAlignment="Left" Margin="92,115,0,0" VerticalAlignment="Top" Width="75" Click="btnhospital_Click" Height="22"/>
+        <Button x:Name="btncloseprogram" Content="Close program" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
+        <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Left" Margin="153,193,0,0" VerticalAlignment="Top" Width="164" Click="btnsearch_Click" Height="22"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="110,59,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

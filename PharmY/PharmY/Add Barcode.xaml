@@ -5,21 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Add barcode" Height="300" Width="300" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Add barcode" Height="369" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF57DAB7">
     <Grid x:Name="Add_barcode">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="177*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="lbladdbarcode" Content="Add Barcode" HorizontalAlignment="Left" Margin="23,72,0,0" VerticalAlignment="Top" Height="25" Width="82"/>
-        <TextBox x:Name="edtaddbarcode" HorizontalAlignment="Left" Height="22" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <TextBox x:Name="edtaddbarcode" HorizontalAlignment="Left" Height="22" Margin="179,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="30,109,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
-        <TextBox x:Name="edtname" HorizontalAlignment="Left" Height="23" Margin="10,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <TextBox x:Name="edtname" HorizontalAlignment="Left" Height="23" Margin="179,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Left" Margin="30,152,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
-        <TextBox x:Name="edtquantity" HorizontalAlignment="Left" Height="22" Margin="10,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <TextBox x:Name="edtquantity" HorizontalAlignment="Left" Height="22" Margin="179,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnaddbarcode" Content="Add" HorizontalAlignment="Left" Margin="30,190,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="btnaddbarcode_Click"/>
-        <Button x:Name="btnbacktoadmin" Content="Back to Admin" Grid.Column="2" HorizontalAlignment="Left" Margin="69,190,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click" Height="22"/>
+        <Button x:Name="btnbacktoadmin" Content="Back to Admin" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
         <DatePicker x:Name="dateadd" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Height="24" Width="126" Grid.ColumnSpan="3"/>
 
     </Grid>
