@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Add barcode" Height="369" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF57DAB7">
+        Title="Add barcode" Height="369" Width="525" WindowStartupLocation="CenterScreen" Background="#FFD9F7EF">
     <Grid x:Name="Add_barcode">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

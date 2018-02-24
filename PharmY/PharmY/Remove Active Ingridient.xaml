@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Remove Active Ingridient" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF8DCB62">
+        Title="Remove Active Ingridient" Height="350" Width="525" WindowStartupLocation="CenterScreen" Background="#FFD7F7C0">
     <Grid>
         <Button Content="Back to admin" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
         <Label x:Name="lblactivename" Content="Active Ingridient Name" HorizontalAlignment="Left" Margin="67,56,0,0" VerticalAlignment="Top"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Search Active Ingridient" Height="369" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF43C384">
+        Title="Search Active Ingridient" Height="369" Width="525" WindowStartupLocation="CenterScreen" Background="#FFDCDDF0">
     <Grid>
         <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="btnbacktomain_Click"/>
         <ComboBox x:Name="cmbactive" HorizontalAlignment="Left" Margin="162,32,0,0" VerticalAlignment="Top" Width="120"/>

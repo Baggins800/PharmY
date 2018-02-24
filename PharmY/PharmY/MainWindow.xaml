@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="MainWindow" Height="369" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF66D427">
+        Title="MainWindow" Height="369" Width="525" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,2,1">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -13,11 +13,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Left" Margin="310,115,0,0" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click" Height="22"/>
-        <Button x:Name="btnhospital" Content="Hospital" HorizontalAlignment="Left" Margin="92,115,0,0" VerticalAlignment="Top" Width="75" Click="btnhospital_Click" Height="22"/>
-        <Button x:Name="btncloseprogram" Content="Close program" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
-        <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Left" Margin="153,193,0,0" VerticalAlignment="Top" Width="164" Click="btnsearch_Click" Height="22"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="110,59,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Left" Margin="310,161,0,0" VerticalAlignment="Top" Width="76" Click="btnAdmin_Click" Height="31" FontFamily="Arial" FontSize="18"/>
+        <Button x:Name="btnhospital" Content="Hospital" HorizontalAlignment="Left" Margin="92,161,0,0" VerticalAlignment="Top" Width="78" Click="btnhospital_Click" Height="31" FontFamily="Arial" FontSize="18"/>
+        <Button x:Name="btncloseprogram" Content="Close program" HorizontalAlignment="Left" Margin="375,288,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click" Height="40" FontFamily="Arial" FontSize="18"/>
+        <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Left" Margin="135,225,0,0" VerticalAlignment="Top" Width="205" Click="btnsearch_Click" Height="31" FontFamily="Arial" FontSize="18"/>
+        <Label Content="WELCOME" HorizontalAlignment="Left" Margin="92,0,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Symbol" FontSize="72"/>
 
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Admin" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FF4BC1A1">
+        Title="Admin" Height="350" Width="525" WindowStartupLocation="CenterScreen" Background="#FFDDFFF6">
     <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
