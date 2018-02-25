@@ -27,6 +27,7 @@ namespace PharmY
         {
             InitializeComponent();
             this.dateadd.SelectedDate = DateTime.Today;
+            edtaddbarcode.Focus();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
