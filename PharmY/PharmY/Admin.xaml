@@ -1,21 +1,22 @@
-﻿<Window x:Class="PharmY.Admin"
+﻿<Controls:MetroWindow x:Class="PharmY.Admin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Admin" Height="350" Width="525" WindowStartupLocation="CenterScreen" Background="#FFDDFFF6">
+        Title="Admin" Height="600" Width="800" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnadd" Content="Add Barcode" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Width="148" Click="btnadd_Click" Height="22"/>
-        <Button x:Name="btnremove" Content="Remove Barcode" HorizontalAlignment="Left" Margin="19,57,0,0" VerticalAlignment="Top" Width="148" Click="btnremove_Click" Height="22"/>
-        <Button x:Name="btnaddactive" Content="Add Active Ingredient" HorizontalAlignment="Left" Margin="19,94,0,0" VerticalAlignment="Top" Width="148" Click="btnaddactive_Click" Height="22"/>
-        <Button x:Name="btnremoveactive" Content="Remove Active Ingredient" HorizontalAlignment="Left" Margin="19,134,0,0" VerticalAlignment="Top" Width="148" Click="btnremoveactive_Click" Height="22"/>
-        <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
-        <Button x:Name="btnreview" Content="Review" HorizontalAlignment="Left" Margin="19,181,0,0" VerticalAlignment="Top" Width="148" Click="btnreview_Click" Height="22"/>
+        <Button x:Name="btnadd" Content="Add Barcode" HorizontalAlignment="Center" Margin="216,62,226,0" VerticalAlignment="Top" Width="350" Click="btnadd_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnremove" Content="Remove Barcode" HorizontalAlignment="Center" Margin="216,142,226,0" VerticalAlignment="Top" Width="350" Click="btnremove_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnaddactive" Content="Add Active Ingredient" HorizontalAlignment="Center" Margin="216,222,226,0" VerticalAlignment="Top" Width="350" Click="btnaddactive_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnremoveactive" Content="Remove Active Ingredient" HorizontalAlignment="Center" Margin="216,302,226,0" VerticalAlignment="Top" Width="350" Click="btnremoveactive_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Center" Margin="216,462,226,0" VerticalAlignment="Top" Width="350" Click="Button_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnreview" Content="Review" HorizontalAlignment="Center" Margin="216,382,226,0" VerticalAlignment="Top" Width="350" Click="btnreview_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>
