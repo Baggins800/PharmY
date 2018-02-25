@@ -61,17 +61,26 @@ namespace PharmY
                     add_barcode.Connection = conn;
 
                     add_quantity.CommandType = CommandType.Text;
-                    add_quantity.CommandText = "insert into DATES_ADDED ([BARCODE_ID],[DATE], [QUANTITY]) values (?,?,?);";
+                    add_quantity.CommandText = "insert into DATES_ADDED ([BARCODE_ID],[DATE], [QUANTITY], [EXPIRY_DATE]) values (?,?,?,?);";
                     add_quantity.Parameters.AddWithValue("@BARCODE_ID", barcode);
                     add_quantity.Parameters.AddWithValue("@DATE", dateadd.Text);
                     add_quantity.Parameters.AddWithValue("@QUANTITY", quantity);
+                    add_quantity.Parameters.AddWithValue("@EXPIRY_DATE", dateexpire.Text);
                     add_quantity.Connection = conn;
                     conn.Open();
-                    try { add_barcode.ExecuteNonQuery(); }
+                    try {
+                        add_barcode.ExecuteNonQuery();
+                        MessageBox.Show("Barcode successfully added.");
+                    }
                     catch (Exception enq) { MessageBox.Show(enq.Message); }
-                    try { add_quantity.ExecuteNonQuery(); }
+                    try {
+                        add_quantity.ExecuteNonQuery();
+                        MessageBox.Show("Stock successfully added.");
+                    }
                     catch (Exception enq) { MessageBox.Show(enq.Message); }
-
+                    edtaddbarcode.Clear();
+                    edtname.Clear();
+                    edtquantity.Clear();
                 }
         }
     }

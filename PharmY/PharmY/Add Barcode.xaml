@@ -20,7 +20,10 @@
         <TextBox x:Name="edtquantity" HorizontalAlignment="Center" Margin="290,197,69.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434"  Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Button x:Name="btnaddbarcode" Content="Add" HorizontalAlignment="Center" Margin="434,405,9.6,90.4" VerticalAlignment="Center" Width="350" Click="btnaddbarcode_Click"  Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Button x:Name="btnbacktoadmin" Content="Back to Admin" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Click="Button_Click"  Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <DatePicker x:Name="dateadd" HorizontalAlignment="Center" Margin="30,20,607.6,0" Width="156" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="32" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dateadd" HorizontalAlignment="Center" Margin="290,258,69.6,0" Width="434" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="56" VerticalAlignment="Top"/>
+        <Label x:Name="lbldateadded" Content="Date Added" HorizontalAlignment="Center" Margin="30,258,508.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
+        <DatePicker x:Name="dateexpire" HorizontalAlignment="Center" Margin="290,319,69.6,0" Width="434" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="56" VerticalAlignment="Top"/>
+        <Label x:Name="lbldateexpiry" Content="Expiry Date" HorizontalAlignment="Center" Margin="30,319,508.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
 
     </Grid>
 </Controls:MetroWindow>
