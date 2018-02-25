@@ -14,18 +14,19 @@ using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data;
 using System.Configuration;
-
+using MahApps.Metro.Controls;
 
 namespace PharmY
 {
     /// <summary>
     /// Interaction logic for Window3.xaml
     /// </summary>
-    public partial class AddBarcode : Window
+    public partial class AddBarcode
     {
         public AddBarcode()
         {
             InitializeComponent();
+            this.dateadd.SelectedDate = DateTime.Today;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
