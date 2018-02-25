@@ -1,23 +1,17 @@
-﻿<Window x:Class="PharmY.MainWindow"
+﻿<Controls:MetroWindow x:Class="PharmY.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="MainWindow" Height="369" Width="525" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
-    <Grid Margin="0,0,2,1">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Left" Margin="310,161,0,0" VerticalAlignment="Top" Width="76" Click="btnAdmin_Click" Height="31" FontFamily="Arial" FontSize="18"/>
-        <Button x:Name="btnhospital" Content="Hospital" HorizontalAlignment="Left" Margin="92,161,0,0" VerticalAlignment="Top" Width="78" Click="btnhospital_Click" Height="31" FontFamily="Arial" FontSize="18"/>
-        <Button x:Name="btncloseprogram" Content="Close program" HorizontalAlignment="Left" Margin="375,288,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click" Height="40" FontFamily="Arial" FontSize="18"/>
-        <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Left" Margin="135,225,0,0" VerticalAlignment="Top" Width="205" Click="btnsearch_Click" Height="31" FontFamily="Arial" FontSize="18"/>
-        <Label Content="WELCOME" HorizontalAlignment="Left" Margin="92,0,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Symbol" FontSize="72"/>
-
+        Title="MainWindow" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
+    <Grid Margin="0,0,0,0">
+        <Label Content="WELCOME" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Segoe UI Symbol" FontSize="72" Margin="212,10,202.6,0" Foreground="#FF8AD47F"/>
+        <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Center" Margin="209,284,202.6,0" VerticalAlignment="Top" Width="350" Click="btnsearch_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btncloseprogram" Content="Close program" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Click="Button_Click" Height="75" FontFamily="Arial" FontSize="18" Margin="209,364,202.6,0" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnhospital" Content="Hospital" HorizontalAlignment="Center" Margin="209,204,202.6,0" VerticalAlignment="Top" Width="350" Click="btnhospital_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Center" Margin="209,124,202.6,0" VerticalAlignment="Top" Width="350" Click="btnAdmin_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
     </Grid>
-</Window>
+</Controls:MetroWindow>

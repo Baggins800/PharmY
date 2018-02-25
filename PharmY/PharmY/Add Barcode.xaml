@@ -19,7 +19,7 @@
         <TextBox x:Name="edtquantity" HorizontalAlignment="Left" Height="22" Margin="179,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnaddbarcode" Content="Add" HorizontalAlignment="Left" Margin="30,190,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="btnaddbarcode_Click"/>
         <Button x:Name="btnbacktoadmin" Content="Back to Admin" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
-        <DatePicker x:Name="dateadd" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Height="24" Width="126" Grid.ColumnSpan="3"/>
+        <DatePicker x:Name="dateadd" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Height="24" Width="126"/>
 
     </Grid>
 </Window>
