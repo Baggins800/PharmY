@@ -12,7 +12,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label x:Name="lblbarcode" Content="Barcode" HorizontalAlignment="Center" Margin="10,195,990.2,0" VerticalAlignment="Top"  FontSize="36" Foreground="#FF3D4E3F" Height="56"/>
-        <TextBox x:Name="edtbarcode" HorizontalAlignment="Center" Margin="288,257,417.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <TextBox x:Name="edtbarcode" HorizontalAlignment="Center" Margin="288,195,417.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <ComboBox HorizontalAlignment="Center" Margin="288,134,417.2,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <DatePicker x:Name="DateHospital" HorizontalAlignment="Center" Margin="288,73,417.2,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Label Content="Name" HorizontalAlignment="Center" Margin="10,257,1023.2,0" VerticalAlignment="Top" RenderTransformOrigin="1.731,2.109" FontSize="36" Foreground="#FF3D4E3F"/>
@@ -24,7 +24,7 @@
         <ListBox Margin="779,73,12.2,100.8" HorizontalAlignment="Center" Width="348"/>
         <Label x:Name="lbllist" Content="Items to Checkout" HorizontalAlignment="Center" Margin="765,15,12.2,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F" Width="362"/>
         <CheckBox x:Name="chchecked" Content="Checked" HorizontalAlignment="Center" Margin="288,440,691.2,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F"/>
-        <Label x:Name="lblname" Content="" HorizontalAlignment="Center" Margin="288,195,417.2,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Label x:Name="lblname" Content="" HorizontalAlignment="Center" Margin="288,257,417.2,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Label Content="Patient Name" HorizontalAlignment="Center" Margin="10,379,905.2,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F"/>
         <TextBox x:Name="edtpatientname" HorizontalAlignment="Center" Margin="288,379,417.2,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
     </Grid>
