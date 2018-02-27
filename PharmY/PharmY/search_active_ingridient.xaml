@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Search Active Ingridient" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFDCDDF0">
+        Title="Search Active Ingridient" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid>
-        <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="btnbacktomain_Click"/>
-        <ComboBox x:Name="cmbactive" HorizontalAlignment="Left" Margin="162,32,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnsearch" Content="Search" HorizontalAlignment="Left" Margin="207,78,0,0" VerticalAlignment="Top" Width="75"/>
-        <ListBox x:Name="lstingridients" HorizontalAlignment="Left" Height="170" Margin="41,78,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblactiveingridient" Content="Active Ingridient name" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Click="btnbacktomain_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <ComboBox x:Name="cmbactive" HorizontalAlignment="Center" Margin="162,32,0,0" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Grid.Column="1"/>
+        <Button x:Name="btnsearch" Content="Search" HorizontalAlignment="Center" Margin="713,445,289,168" VerticalAlignment="Center" Width="350" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <ListBox x:Name="lstingridients" HorizontalAlignment="Center" Margin="400,118,178,268" Width="774"/>
+        <Label x:Name="lblactiveingridient" Content="Active Ingridient name" HorizontalAlignment="Center" Margin="161,34,817,0" VerticalAlignment="Top" Height="56" Width="374" Foreground="#FF3D4E3F" FontSize="36"/>
 
     </Grid>
 </Window>

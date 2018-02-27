@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Remove Active Ingridient" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD7F7C0">
+        Title="Remove Active Ingridient" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid>
-        <Button Content="Back to admin" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
-        <Label x:Name="lblactivename" Content="Active Ingridient Name" HorizontalAlignment="Left" Margin="67,56,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="edtactivename" HorizontalAlignment="Left" Height="23" Margin="232,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnremoveactive" Content="Remove active Ingridient" HorizontalAlignment="Left" Margin="110,149,0,0" VerticalAlignment="Top" Width="148" Click="btnremoveactive_Click"/>
+        <Button Content="Back to admin" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Height="75" Click="Button_Click" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Label x:Name="lblactivename" Content="Active Ingridient Name" HorizontalAlignment="Center" Margin="168,232,804,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F" Height="56" Width="380"/>
+        <TextBox x:Name="edtactivename" HorizontalAlignment="Center" Height="56" Margin="572,232,346,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnremoveactive" Content="Remove active Ingridient" HorizontalAlignment="Center" Margin="713,455,289,159" VerticalAlignment="Center" Width="350" Height="74" Click="btnremoveactive_Click" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
 
     </Grid>
 </Window>

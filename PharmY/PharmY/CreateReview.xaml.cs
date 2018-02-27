@@ -11,13 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace PharmY
 {
     /// <summary>
     /// Interaction logic for CreateReview.xaml
     /// </summary>
-    public partial class CreateReview : Window
+    public partial class CreateReview 
     {
         public CreateReview()
         {

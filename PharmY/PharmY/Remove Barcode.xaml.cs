@@ -14,13 +14,14 @@ using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data;
 using System.Configuration;
+using MahApps.Metro.Controls;
 
 namespace PharmY
 {
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class RemoveBarcode : Window
+    public partial class RemoveBarcode 
     {
         public RemoveBarcode()
         {
