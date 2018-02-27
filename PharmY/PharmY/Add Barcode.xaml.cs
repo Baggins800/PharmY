@@ -14,14 +14,14 @@ using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data;
 using System.Configuration;
-using MahApps.Metro.Controls;
+using MahApps.Metro.Controls;//metro moet by kom orals
 
 namespace PharmY
 {
     /// <summary>
     /// Interaction logic for Window3.xaml
     /// </summary>
-    public partial class AddBarcode
+    public partial class AddBarcode //maak dieselfde by die res 
     {
         public AddBarcode()
         {

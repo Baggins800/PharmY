@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
         Title="Hospital" Height="350" Width="525" WindowStartupLocation="CenterScreen" Background="#FFD6F9F6">
-    <Grid>
+    <Grid HorizontalAlignment="Center" Margin="0,0,0.4,-0.2" Width="518" Height="321" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -19,10 +19,12 @@
         <TextBox x:Name="edtquantity" HorizontalAlignment="Left" Height="23" Margin="120,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="out where" HorizontalAlignment="Left" Margin="33,39,0,0" VerticalAlignment="Top"/>
         <Button Content="Back to main" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
-        <Button x:Name="btnaddhospital" Content="Add script" HorizontalAlignment="Left" Margin="109,249,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnaddhospital" Content="Add script" HorizontalAlignment="Left" Margin="109,270,0,0" VerticalAlignment="Top" Width="75"/>
         <ListBox HorizontalAlignment="Left" Height="117" Margin="296,81,0,0" VerticalAlignment="Top" Width="211"/>
         <Label x:Name="lbllist" Content="List of items to go out" HorizontalAlignment="Left" Margin="336,50,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chchecked" Content="Checked" HorizontalAlignment="Left" Margin="99,217,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chchecked" Content="Checked" HorizontalAlignment="Left" Margin="109,235,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblname" Content="" HorizontalAlignment="Left" Margin="120,110,0,0" VerticalAlignment="Top" Width="112"/>
+        <Label Content="Patient Name" HorizontalAlignment="Left" Margin="32,192,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="edtpatientname" HorizontalAlignment="Left" Height="23" Margin="120,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
