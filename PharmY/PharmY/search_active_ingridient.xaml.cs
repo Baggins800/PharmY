@@ -36,5 +36,10 @@ namespace PharmY
         {
 
         }
+
+        private void btnsearch_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

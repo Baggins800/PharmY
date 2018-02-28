@@ -21,7 +21,7 @@ namespace PharmY
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class RemoveBarcode 
+    public partial class RemoveBarcode
     {
         public RemoveBarcode()
         {
@@ -37,32 +37,25 @@ namespace PharmY
 
         private void btnremovebarcode1_Click(object sender, RoutedEventArgs e)
         {
-            int barcode = 0;
-            if (!Int32.TryParse(edtbarcode.Text, out barcode))
+
+            using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
             {
-                MessageBox.Show("Please make sure the barcode is a number.");
+                OleDbCommand remove_barcode = new OleDbCommand();
+                remove_barcode.CommandType = CommandType.Text;
+                remove_barcode.CommandText = "update ITEMS set DISCONTINUED = true where [BARCODE_ID]=?;";
+                remove_barcode.Parameters.AddWithValue("@BARCODE_ID", edtbarcode.Text);
+                remove_barcode.Connection = conn;
+                OleDbCommand remove_ingredient = new OleDbCommand();
+                remove_ingredient.CommandType = CommandType.Text;
+                remove_ingredient.CommandText = "delete * from ACTIVE_INGREDIENTS where [BARCODE_ID]=?;";
+                remove_ingredient.Parameters.AddWithValue("@BARCODE_ID", edtbarcode.Text);
+                remove_ingredient.Connection = conn;
+                conn.Open();
+                try { remove_ingredient.ExecuteNonQuery(); }
+                catch (Exception enq) { MessageBox.Show(enq.Message); }
+                try { remove_barcode.ExecuteNonQuery(); }
+                catch (Exception enq) { MessageBox.Show(enq.Message); }
             }
-            else
-                using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
-                {
-                    OleDbCommand remove_barcode = new OleDbCommand();
-                    remove_barcode.CommandType = CommandType.Text;
-                    remove_barcode.CommandText = "update ITEMS set DISCONTINUED = true where [BARCODE_ID]=?;";
-                    remove_barcode.Parameters.AddWithValue("@BARCODE_ID", barcode);
-                    remove_barcode.Connection = conn;
-                    OleDbCommand remove_ingredient = new OleDbCommand();
-                    remove_ingredient.CommandType = CommandType.Text;
-                    remove_ingredient.CommandText = "delete * from ACTIVE_INGREDIENTS where [BARCODE_ID]=?;";
-                    remove_ingredient.Parameters.AddWithValue("@BARCODE_ID", barcode);
-                    remove_ingredient.Connection = conn;
-                    conn.Open();
-                    try { remove_ingredient.ExecuteNonQuery(); }
-                    catch (Exception enq) { MessageBox.Show(enq.Message); }
-                    try { remove_barcode.ExecuteNonQuery(); }
-                    catch (Exception enq) { MessageBox.Show(enq.Message); }
-
-
-                }
         }
     }
 }

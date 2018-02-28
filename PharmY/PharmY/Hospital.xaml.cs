@@ -40,10 +40,11 @@ namespace PharmY
         private class CheckoutItem
         {
             public string Name, PatientName, CheckoutTime, Department;
-            public int Quantity, DepartmentID, BarcodeID;
-            public CheckoutItem(string name, int value, int quantity, string patientname, string checkouttime, string department, int departmentid)
+            public int Quantity, DepartmentID;
+            public string BarcodeID;
+            public CheckoutItem(string name, string barcodeid, int quantity, string patientname, string checkouttime, string department, int departmentid)
             {
-                Name = name; BarcodeID = value; Quantity = quantity; PatientName = patientname; CheckoutTime = checkouttime;
+                Name = name; BarcodeID = barcodeid; Quantity = quantity; PatientName = patientname; CheckoutTime = checkouttime;
                 DepartmentID = departmentid; Department = department;
             }
             public override string ToString()
@@ -95,25 +96,20 @@ namespace PharmY
             {
                 try
                 {
-                    int barcode = 0;
-                    if (!Int32.TryParse(edtbarcode.Text, out barcode))
-                    {
-                        MessageBox.Show("Please make sure the barcode is a number.");
-                    }
-                    else
-                        using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
-                        {
-                            OleDbCommand select_barcode = new OleDbCommand();
-                            select_barcode.CommandType = CommandType.Text;
-                            select_barcode.CommandText = "select top 1 NAME from ITEMS where [BARCODE_ID] = ?;";
-                            select_barcode.Parameters.AddWithValue("@BARCODE_ID", barcode);
-                            select_barcode.Connection = conn;
-                            conn.Open();
-                            using (OleDbDataReader reader = select_barcode.ExecuteReader())
-                                if (reader.Read())
-                                    lblname.Content = reader.GetString(0);
 
-                        }
+                    using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
+                    {
+                        OleDbCommand select_barcode = new OleDbCommand();
+                        select_barcode.CommandType = CommandType.Text;
+                        select_barcode.CommandText = "select top 1 NAME from ITEMS where [BARCODE_ID] = ?;";
+                        select_barcode.Parameters.AddWithValue("@BARCODE_ID", edtbarcode.Text);
+                        select_barcode.Connection = conn;
+                        conn.Open();
+                        using (OleDbDataReader reader = select_barcode.ExecuteReader())
+                            if (reader.Read())
+                                lblname.Content = reader.GetString(0);
+
+                    }
                 }
                 catch (Exception enq) { MessageBox.Show(enq.Message); }
                 this.edtquantity.Focus();
@@ -122,8 +118,8 @@ namespace PharmY
 
         private void btnaddhospital_Click(object sender, RoutedEventArgs e)
         {
-            int barcode = 0, quantity = 0;
-            if (!Int32.TryParse(edtbarcode.Text, out barcode) || !Int32.TryParse(edtquantity.Text, out quantity))
+            int quantity = 0;
+            if (!Int32.TryParse(edtquantity.Text, out quantity))
             {
                 MessageBox.Show("Please make sure the barcode/quantity is a number.");
             }
@@ -132,7 +128,7 @@ namespace PharmY
                 Item a = new Item("", 0, 0);
                 foreach (Item l in cbdepartment.Items)
                     if (l.Index == cbdepartment.SelectedIndex) a = l;
-                lbcheckout.Items.Add(new CheckoutItem((dynamic)lblname.Content, barcode, quantity, edtpatientname.Text, DateHospital.Text, cbdepartment.Text, a.Value));
+                lbcheckout.Items.Add(new CheckoutItem((dynamic)lblname.Content, edtbarcode.Text, quantity, edtpatientname.Text, DateHospital.Text, cbdepartment.Text, a.Value));
                 edtbarcode.Focus();
                 edtbarcode.Clear();
                 edtpatientname.Clear();

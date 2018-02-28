@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Click="btnbacktomain_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <ComboBox x:Name="cmbactive" HorizontalAlignment="Center" Margin="162,32,0,0" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Grid.Column="1"/>
-        <Button x:Name="btnsearch" Content="Search" HorizontalAlignment="Center" Margin="713,445,289,168" VerticalAlignment="Center" Width="350" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnsearch" Content="Search" HorizontalAlignment="Center" Margin="713,445,289,168" VerticalAlignment="Center" Width="350" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="btnsearch_Click_1"/>
         <ListBox x:Name="lstingridients" HorizontalAlignment="Center" Margin="400,118,178,268" Width="774"/>
         <Label x:Name="lblactiveingridient" Content="Active Ingridient name" HorizontalAlignment="Center" Margin="161,34,817,0" VerticalAlignment="Top" Height="56" Width="374" Foreground="#FF3D4E3F" FontSize="36"/>
 
