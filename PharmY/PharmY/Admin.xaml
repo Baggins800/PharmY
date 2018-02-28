@@ -15,8 +15,9 @@
         <Button x:Name="btnremove" Content="Remove Barcode" HorizontalAlignment="Center" Margin="216,142,226,0" VerticalAlignment="Top" Width="350" Click="btnremove_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Button x:Name="btnaddactive" Content="Add Active Ingredient" HorizontalAlignment="Center" Margin="216,222,226,0" VerticalAlignment="Top" Width="350" Click="btnaddactive_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Button x:Name="btnremoveactive" Content="Remove Active Ingredient" HorizontalAlignment="Center" Margin="216,302,226,0" VerticalAlignment="Top" Width="350" Click="btnremoveactive_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Center" Margin="216,462,226,0" VerticalAlignment="Top" Width="350" Click="Button_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <Button x:Name="btnreview" Content="Review" HorizontalAlignment="Center" Margin="216,382,226,0" VerticalAlignment="Top" Width="350" Click="btnreview_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnbacktomain" Content="back to main" HorizontalAlignment="Center" Margin="495,550,505,0" VerticalAlignment="Top" Width="350" Click="Button_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnreview" Content="Stock in and out" HorizontalAlignment="Center" Margin="216,382,226,0" VerticalAlignment="Top" Width="350" Click="btnreview_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button Content="Stock left in store" HorizontalAlignment="Center" Margin="495,465,505,0" VerticalAlignment="Top" Width="350" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="Button_Click_1"/>
 
     </Grid>
 </Controls:MetroWindow>

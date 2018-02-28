@@ -77,6 +77,9 @@
     <Compile Include="Add Barcode.xaml.cs">
       <DependentUpon>Add Barcode.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Invetory.xaml.cs">
+      <DependentUpon>Invetory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Remove Barcode.xaml.cs">
       <DependentUpon>Remove Barcode.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
       <DependentUpon>search_active_ingridient.xaml</DependentUpon>
     </Compile>
     <Page Include="CreateReview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Invetory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
