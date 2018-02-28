@@ -6,26 +6,26 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Hospital" Height="683.4" Width="1145.8" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
+        Title="Hospital" Height="718" Width="1366" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,0.4,-0.2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label x:Name="lblbarcode" Content="Barcode" HorizontalAlignment="Center" Margin="10,195,990.2,0" VerticalAlignment="Top"  FontSize="36" Foreground="#FF3D4E3F" Height="56"/>
-        <TextBox x:Name="edtbarcode" HorizontalAlignment="Center" Margin="288,195,417.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <ComboBox HorizontalAlignment="Center" Margin="288,134,417.2,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <TextBox x:Name="edtbarcode" HorizontalAlignment="Center" Margin="288,195,417.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" KeyDown="edtbarcode_KeyDown" TabIndex="0"/>
+        <ComboBox x:Name="cbdepartment" HorizontalAlignment="Center" Margin="288,134,417.2,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <DatePicker x:Name="DateHospital" HorizontalAlignment="Center" Margin="288,73,417.2,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Label Content="Name" HorizontalAlignment="Center" Margin="10,257,1023.2,0" VerticalAlignment="Top" RenderTransformOrigin="1.731,2.109" FontSize="36" Foreground="#FF3D4E3F"/>
         <Label Content="Quantity" HorizontalAlignment="Center" Margin="10,318,931.2,0" VerticalAlignment="Top" RenderTransformOrigin="0.064,0.75" FontSize="36" Foreground="#FF3D4E3F" Width="198"/>
-        <TextBox x:Name="edtquantity" HorizontalAlignment="Center" Margin="288,318,417.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <TextBox x:Name="edtquantity" HorizontalAlignment="Center" Margin="288,318,417.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" TabIndex="1" KeyDown="edtquantity_KeyDown"/>
         <Label Content="Department" HorizontalAlignment="Center" Margin="10,134,856.2,0" VerticalAlignment="Top"  FontSize="36" Foreground="#FF3D4E3F" Height="56" Width="273"/>
-        <Button Content="Back to main" HorizontalAlignment="Center" Margin="779,0,10.2,20.8" Width="350" Click="Button_Click" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="75" VerticalAlignment="Bottom"/>
-        <Button x:Name="btnaddhospital" Content="Add script" HorizontalAlignment="Center" Margin="424,0,365.2,20.8" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="75" VerticalAlignment="Bottom"/>
-        <ListBox Margin="779,73,12.2,100.8" HorizontalAlignment="Center" Width="348"/>
-        <Label x:Name="lbllist" Content="Items to Checkout" HorizontalAlignment="Center" Margin="765,15,12.2,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F" Width="362"/>
-        <CheckBox x:Name="chchecked" Content="Checked" HorizontalAlignment="Center" Margin="288,440,691.2,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F"/>
-        <Label x:Name="lblname" Content="" HorizontalAlignment="Center" Margin="288,257,417.2,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button Content="Back to main" HorizontalAlignment="Center" Margin="288,0,417.2,20.8" Width="434" Click="Button_Click" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="75" VerticalAlignment="Bottom"/>
+        <Button x:Name="btnaddhospital" Content="Add script" HorizontalAlignment="Center" Margin="288,0,417.2,100.8" Width="434" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="75" VerticalAlignment="Bottom" Click="btnaddhospital_Click" TabIndex="3" KeyDown="btnaddhospital_KeyDown"/>
+        <ListBox x:Name="lbcheckout" Margin="779,73,12.2,100.8" HorizontalAlignment="Center" Width="348" FontFamily="Arial" FontSize="18" Background="#FFE7FFE2" Foreground="#FF3D4E3F" />
+        <Label x:Name="lbllist" Content="Items to Checkout" HorizontalAlignment="Center" Margin="889,15,109,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F" Width="362"/>
+        <Label x:Name="lblname" Content="" HorizontalAlignment="Center" Margin="288,257,417.2,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" TabIndex="2147483645"/>
         <Label Content="Patient Name" HorizontalAlignment="Center" Margin="10,379,905.2,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F"/>
-        <TextBox x:Name="edtpatientname" HorizontalAlignment="Center" Margin="288,379,417.2,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <TextBox x:Name="edtpatientname" HorizontalAlignment="Center" Margin="288,379,417.2,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" TabIndex="2" KeyDown="edtpatientname_KeyDown"/>
+        <Button x:Name="btncheckout" Content="CHECKOUT" HorizontalAlignment="Center" Margin="779,0,10.2,20.8" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="75" VerticalAlignment="Bottom" Click="btncheckout_Click" TabIndex="4"/>
     </Grid>
 </Controls:MetroWindow>
