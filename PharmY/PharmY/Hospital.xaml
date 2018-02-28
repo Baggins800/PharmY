@@ -24,8 +24,10 @@
         <ListBox x:Name="lbcheckout" Margin="779,73,12.2,100.8" HorizontalAlignment="Center" Width="348" FontFamily="Arial" FontSize="18" Background="#FFE7FFE2" Foreground="#FF3D4E3F" />
         <Label x:Name="lbllist" Content="Items to Checkout" HorizontalAlignment="Center" Margin="889,15,109,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F" Width="362"/>
         <Label x:Name="lblname" Content="" HorizontalAlignment="Center" Margin="288,257,417.2,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" TabIndex="2147483645"/>
-        <Label Content="Patient Name" HorizontalAlignment="Center" Margin="10,379,905.2,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F"/>
+        <Label Content="Patient Name" HorizontalAlignment="Center" Margin="120,381,1007.6,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF3D4E3F" Width="230" Height="56"/>
         <TextBox x:Name="edtpatientname" HorizontalAlignment="Center" Margin="288,379,417.2,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" TabIndex="2" KeyDown="edtpatientname_KeyDown"/>
         <Button x:Name="btncheckout" Content="CHECKOUT" HorizontalAlignment="Center" Margin="779,0,10.2,20.8" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="75" VerticalAlignment="Bottom" Click="btncheckout_Click" TabIndex="4"/>
+        <Label Content="Expire Date" HorizontalAlignment="Center" Margin="120,442,1007.6,0" VerticalAlignment="Top" Width="230" Height="56" FontSize="36" Foreground="#FF3D4E3F"/>
+        <DatePicker HorizontalAlignment="Center" Margin="397,443,526.6,0" VerticalAlignment="Top"  Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
     </Grid>
 </Controls:MetroWindow>
