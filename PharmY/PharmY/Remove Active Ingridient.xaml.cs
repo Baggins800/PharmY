@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using MahApps.Metro.Controls;
 using System.Data.OleDb;
 using System.Data;
 using System.Configuration;
@@ -21,7 +21,7 @@ namespace PharmY
     /// <summary>
     /// Interaction logic for Window6.xaml
     /// </summary>
-    public partial class RemoveActiveIngridient : Window
+    public partial class RemoveActiveIngridient
     {
         public RemoveActiveIngridient()
         {

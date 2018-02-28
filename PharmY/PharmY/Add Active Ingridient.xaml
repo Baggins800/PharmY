@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Add Active Ingridient" Height="350" Width="525" WindowStartupLocation="CenterScreen" Background="#FFE2DBFF">
+        Title="Add Active Ingridient" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,2,1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -13,13 +13,13 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Back to admin" Grid.Column="1" HorizontalAlignment="Left" Margin="411,288,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" Height="22"/>
-        <Label x:Name="lblactiveingridientname" Content="Active Ingridient Name" Grid.Column="1" HorizontalAlignment="Left" Margin="23,41,0,0" VerticalAlignment="Top" Height="26" Width="145"/>
-        <Label x:Name="lblbarcode" Content="Barcode" Grid.Column="1" HorizontalAlignment="Left" Margin="23,97,0,0" VerticalAlignment="Top" Height="26" Width="53"/>
+        <Button Content="Back to admin" Grid.Column="1" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Click="Button_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Label x:Name="lblactiveingridientname" Content="Active Ingridient Name" Grid.Column="1" HorizontalAlignment="Center" Margin="98,160,874,0" VerticalAlignment="Top" Height="56" Width="378" FontSize="36" Foreground="#FF3D4E3F"/>
+        <Label x:Name="lblbarcode" Content="Barcode" Grid.Column="1" HorizontalAlignment="Center" Margin="332,284,874,0" VerticalAlignment="Top" Height="56" Width="144" FontSize="36" Foreground="#FF3D4E3F"/>
 
-        <TextBox x:Name="edtactivename" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="208,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="edtbarcode" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="208,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnaddactive" Content="Add Active" Grid.Column="1" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="btnaddactive_Click"/>
+        <TextBox x:Name="edtactivename" Grid.Column="1" HorizontalAlignment="Center" Height="75" Margin="516,160,484,452" TextWrapping="Wrap" VerticalAlignment="Center" Width="350" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <TextBox x:Name="edtbarcode" Grid.Column="1" HorizontalAlignment="Center" Height="76" Margin="516,284,484,327" TextWrapping="Wrap" VerticalAlignment="Center" Width="350" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Button x:Name="btnaddactive" Content="Add Active" Grid.Column="1" HorizontalAlignment="Center" Margin="712,443,288,168" VerticalAlignment="Center" Width="350" Height="76" Click="btnaddactive_Click" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
 
 
 

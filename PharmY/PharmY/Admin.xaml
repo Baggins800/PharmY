@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Admin" Height="600" Width="800" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
+        Title="Admin" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

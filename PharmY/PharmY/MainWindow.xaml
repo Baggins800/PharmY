@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="MainWindow" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
+        Title="MainWindow" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,0,0">
         <Label Content="WELCOME" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Segoe UI Symbol" FontSize="72" Margin="212,10,202.6,0" Foreground="#FF8AD47F"/>
         <Button x:Name="btnsearch" Content="Search Active Ingridient" HorizontalAlignment="Center" Margin="209,284,202.6,0" VerticalAlignment="Top" Width="350" Click="btnsearch_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>

@@ -14,13 +14,14 @@ using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data;
 using System.Configuration;
+using MahApps.Metro.Controls;
 
 namespace PharmY
 {
     /// <summary>
     /// Interaction logic for Window5.xaml
     /// </summary>
-    public partial class AddActiveIngridient : Window
+    public partial class AddActiveIngridient 
     {
         public AddActiveIngridient()
         {

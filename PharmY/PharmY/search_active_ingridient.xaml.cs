@@ -11,13 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace PharmY
 {
     /// <summary>
     /// Interaction logic for Window7.xaml
     /// </summary>
-    public partial class SearchActiveIngridient : Window
+    public partial class SearchActiveIngridient 
     {
         public SearchActiveIngridient()
         {

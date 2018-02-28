@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title=" Create Review" Height="369" Width="525" WindowStartupLocation="CenterScreen" Background="#FFBEFDD5">
+        Title=" Create Review" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,2,1">
-        <Button x:Name="btnbacktoadminreview" Content="Back To Admin" HorizontalAlignment="Left" Margin="411,280,0,0" VerticalAlignment="Top" Width="94" Click="btnbacktoadminreview_Click"/>
+        <Button x:Name="btnbacktoadminreview" Content="Back To Admin" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Click="btnbacktoadminreview_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
 
     </Grid>
 </Window>

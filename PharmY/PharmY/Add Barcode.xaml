@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
-        Title="Add barcode" Height="600" Width="800" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
+        Title="Add barcode" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid x:Name="Add_barcode">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

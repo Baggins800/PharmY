@@ -6,11 +6,11 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:PharmY"
         mc:Ignorable="d"
+
         Title="Hospital" Height="718" Width="1366" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
+
     <Grid Margin="0,0,0.4,-0.2">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+
         <Label x:Name="lblbarcode" Content="Barcode" HorizontalAlignment="Center" Margin="10,195,990.2,0" VerticalAlignment="Top"  FontSize="36" Foreground="#FF3D4E3F" Height="56"/>
         <TextBox x:Name="edtbarcode" HorizontalAlignment="Center" Margin="288,195,417.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" KeyDown="edtbarcode_KeyDown" TabIndex="0"/>
         <ComboBox x:Name="cbdepartment" HorizontalAlignment="Center" Margin="288,134,417.2,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
