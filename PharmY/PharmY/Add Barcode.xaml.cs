@@ -61,7 +61,8 @@ namespace PharmY
                     add_barcode.Connection = conn;
 
                     add_quantity.CommandType = CommandType.Text;
-                    add_quantity.CommandText = "insert into DATES_ADDED ([BARCODE_ID],[DATE], [QUANTITY], [EXPIRY_DATE]) values (?,?,?,?);";
+                    add_quantity.CommandText = "insert into DATES_ADDED ([INVOICED_ID],[BARCODE_ID],[DATE], [QUANTITY], [EXPIRY_DATE]) values (?,?,?,?,?);";
+                    add_quantity.Parameters.AddWithValue("@INVOICED_ID", edtinvoice.Text.ToUpper());
                     add_quantity.Parameters.AddWithValue("@BARCODE_ID", edtaddbarcode.Text);
                     add_quantity.Parameters.AddWithValue("@DATE", dateadd.Text);
                     add_quantity.Parameters.AddWithValue("@QUANTITY", quantity);

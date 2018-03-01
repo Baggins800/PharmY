@@ -37,7 +37,6 @@ namespace PharmY
 
         private void btnremovebarcode1_Click(object sender, RoutedEventArgs e)
         {
-
             using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
             {
                 OleDbCommand remove_barcode = new OleDbCommand();

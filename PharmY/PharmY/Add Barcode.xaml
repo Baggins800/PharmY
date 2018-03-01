@@ -12,18 +12,20 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lbladdbarcode" Content="Add Barcode" HorizontalAlignment="Center" Margin="30,75,508.6,0" VerticalAlignment="Top" Height="56" Width="255" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F"/>
+        <Label x:Name="lbladdbarcode" Content="Add Barcode" HorizontalAlignment="Center" Margin="287,75,811.6,0" VerticalAlignment="Top" Height="56" Width="255" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F"/>
         <TextBox x:Name="edtaddbarcode" HorizontalAlignment="Center" Margin="290,75,69.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434"  Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <Label Content="Name" HorizontalAlignment="Center" Margin="30,135,508.6,0" VerticalAlignment="Top" Height="56" Width="255" FontSize="36" Foreground="#FF3D4E3F"/>
+        <Label Content="Name" HorizontalAlignment="Center" Margin="287,136,811.6,0" VerticalAlignment="Top" Height="56" Width="255" FontSize="36" Foreground="#FF3D4E3F"/>
         <TextBox x:Name="edtname" HorizontalAlignment="Center" Margin="290,136,69.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Center" Margin="30,197,508.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
+        <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Center" Margin="287,197,811.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
         <TextBox x:Name="edtquantity" HorizontalAlignment="Center" Margin="290,197,69.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434"  Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Button x:Name="btnaddbarcode" Content="Add" HorizontalAlignment="Center" Margin="434,405,9.6,90.4" VerticalAlignment="Center" Width="350" Click="btnaddbarcode_Click"  Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Button x:Name="btnbacktoadmin" Content="Back to Admin" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Click="Button_Click"  Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <DatePicker x:Name="dateadd" HorizontalAlignment="Center" Margin="290,258,69.6,0" Width="434" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="56" VerticalAlignment="Top"/>
-        <Label x:Name="lbldateadded" Content="Date Added" HorizontalAlignment="Center" Margin="30,258,508.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
+        <Label x:Name="lbldateadded" Content="Date Added" HorizontalAlignment="Center" Margin="287,258,811.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
         <DatePicker x:Name="dateexpire" HorizontalAlignment="Center" Margin="290,319,69.6,0" Width="434" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Height="56" VerticalAlignment="Top"/>
-        <Label x:Name="lbldateexpiry" Content="Expiry Date" HorizontalAlignment="Center" Margin="30,319,508.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
+        <Label x:Name="lbldateexpiry" Content="Expiry Date" HorizontalAlignment="Center" Margin="287,319,811.6,0" VerticalAlignment="Top" Height="56" Width="255" Foreground="#FF3D4E3F" FontSize="36"/>
+        <TextBox x:Name="edtinvoice" HorizontalAlignment="Center" Margin="570,380,349.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Label x:Name="lbldateexpiry_Copy" Content="Invoice Number" HorizontalAlignment="Center" Margin="287,375,788.6,0" VerticalAlignment="Top" Height="56" Width="278" Foreground="#FF3D4E3F" FontSize="36"/>
 
     </Grid>
 </Controls:MetroWindow>
