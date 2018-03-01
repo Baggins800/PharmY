@@ -68,11 +68,13 @@ namespace PharmY
                     add_quantity.Parameters.AddWithValue("@EXPIRY_DATE", dateexpire.Text);
                     add_quantity.Connection = conn;
                     conn.Open();
-                    try {
+                    try
+                    {
                         add_barcode.ExecuteNonQuery();
                         MessageBox.Show("Barcode successfully added.");
                     }
-                    catch (Exception enq) { MessageBox.Show(enq.Message); }
+                    catch (Exception enq) { /* MessageBox.Show(enq.Message);*/ }
+
                     try {
                         add_quantity.ExecuteNonQuery();
                         MessageBox.Show("Stock successfully added.");
