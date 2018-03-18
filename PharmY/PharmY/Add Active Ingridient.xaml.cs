@@ -37,8 +37,8 @@ namespace PharmY
 
         private void btnaddactive_Click(object sender, RoutedEventArgs e)
         {
-            int barcode = 0;
-            if (!Int32.TryParse(edtbarcode.Text, out barcode))
+            string barcode = edtbarcode.Text;
+            if (barcode.Length < 1)
             {
                 MessageBox.Show("Please make sure the barcode is a number.");
             }
@@ -52,7 +52,11 @@ namespace PharmY
                     add_barcode.Parameters.AddWithValue("@BARCODE_ID", barcode);
                     add_barcode.Connection = conn;
                     conn.Open();
-                    try { add_barcode.ExecuteNonQuery(); }
+                    try {
+                        add_barcode.ExecuteNonQuery();
+                        edtbarcode.Text = "";
+                        edtactivename.Text = "";
+                    }
                     catch (Exception enq) { MessageBox.Show(enq.Message); }
                 }
         }
