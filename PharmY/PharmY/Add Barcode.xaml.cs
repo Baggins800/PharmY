@@ -14,15 +14,42 @@ using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data;
 using System.Configuration;
-using MahApps.Metro.Controls;//metro moet by kom orals
+using MahApps.Metro.Controls;
 
 namespace PharmY
 {
     /// <summary>
     /// Interaction logic for Window3.xaml
     /// </summary>
-    public partial class AddBarcode //maak dieselfde by die res 
+    public partial class AddBarcode 
     {
+
+        private void edtbarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return || e.Key == Key.Tab)
+            {
+                try
+                {
+
+                    using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
+                    {
+                        OleDbCommand select_barcode = new OleDbCommand();
+                        select_barcode.CommandType = CommandType.Text;
+                        select_barcode.CommandText = "select top 1 NAME from ITEMS where [BARCODE_ID] = ?;";
+                        select_barcode.Parameters.AddWithValue("@BARCODE_ID", edtaddbarcode.Text);
+                        select_barcode.Connection = conn;
+                        conn.Open();
+                        using (OleDbDataReader reader = select_barcode.ExecuteReader())
+                            if (reader.Read())
+                                edtname.Text = reader.GetString(0);
+
+                    }
+                }
+                catch (Exception enq) { MessageBox.Show(enq.Message); }
+                this.edtquantity.Focus();
+            }
+        }
+
         public AddBarcode()
         {
             InitializeComponent();
