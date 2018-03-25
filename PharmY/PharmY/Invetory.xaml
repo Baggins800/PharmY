@@ -11,7 +11,7 @@
         <Button x:Name ="btnreviewonhand" Content="Review" HorizontalAlignment="Center" Margin="445,385,473,228" VerticalAlignment="Center" Width="434" Click="Button_Click"  Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Button x:Name="btnback" Content="Back to admin" HorizontalAlignment="Center" Margin="445,490,473,123" VerticalAlignment="Center" Width="434" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="btnback_Click"/>
         <Label x:Name="lbltodate" Content="To date" HorizontalAlignment="Center" Margin="246,272,850,0" VerticalAlignment="Top" Height="56" Width="256" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F"/>
-        <DatePicker HorizontalAlignment="Center" Margin="445,273,473,0" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <DatePicker x:Name="toDate" HorizontalAlignment="Center" Margin="445,273,473,0" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
     </Grid>
 </Controls:MetroWindow>
 
