@@ -29,5 +29,12 @@ namespace PharmY
         {
 
         }
+
+        private void btnback_Click(object sender, RoutedEventArgs e)
+        {
+            var newForm = new Admin(); //create your new form admin.
+            newForm.Show(); //show the new form.
+            this.Close(); //only if you want to close the current form
+        }
     }
 }
