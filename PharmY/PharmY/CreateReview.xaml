@@ -8,13 +8,12 @@
         Title=" Create Review" Height="718" Width="1360" WindowStartupLocation="CenterScreen" Background="#FFD4F7C0">
     <Grid Margin="0,0,2,1">
         <Button x:Name="btnbacktoadminreview" Content="Back To Admin" HorizontalAlignment="Center" Margin="434,485,9.6,10.4" VerticalAlignment="Center" Width="350" Click="btnbacktoadminreview_Click" Height="75" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <DatePicker HorizontalAlignment="Center" Margin="500,46,416,0" VerticalAlignment="Top" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <DatePicker HorizontalAlignment="Center" Margin="500,167,416,0" VerticalAlignment="Top" RenderTransformOrigin="1.49,0.615" Width="434" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <Label Content="From" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="56" Width="126" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F" Margin="328,46,896,0"/>
-        <Label Content="To" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="56" Width="96" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F" Margin="358,0,896,464"/>
-        <Button Content="Review" HorizontalAlignment="Center" Margin="712,443,288,169" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
-        <CheckBox Content="Checked in to store" HorizontalAlignment="Center" Margin="328,303,674,0" VerticalAlignment="Top" Height="53" Width="348" FontSize="36" Foreground="#FF3D4E3F"/>
-        <CheckBox Content="Out of store" HorizontalAlignment="Center" Margin="834,291,288,0" VerticalAlignment="Top" Height="53" Width="228" FontSize="36" Foreground="#FF3D4E3F"/>
+        <DatePicker x:Name="fromDate" HorizontalAlignment="Center" Margin="501,46,288.6,0" VerticalAlignment="Top" Width="562" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <DatePicker x:Name="toDate" HorizontalAlignment="Center" Margin="501,167,288.6,0" VerticalAlignment="Top" RenderTransformOrigin="1.49,0.615" Width="562" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
+        <Label Content="From" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="56" Width="126" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F" Margin="329,46,896.6,0"/>
+        <Label Content="To" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="56" Width="126" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F" Margin="329,0,896.6,463.8"/>
+        <Button x:Name="review_out" Content="Review Out" HorizontalAlignment="Center" Margin="713,437,288.6,175.8" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="Button_Click_1"/>
+        <Button x:Name="review_in" Content="Review In" HorizontalAlignment="Center" Margin="713,335,288.6,277.8" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="review_in_Click"/>
 
     </Grid>
 </Window>
