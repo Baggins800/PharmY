@@ -110,7 +110,8 @@ namespace PharmY
                     "OUT_SCRIPTS.PATIENT_NAME as [PATIENT_NAME], OUT_SCRIPTS.QUANTITY as [QUANTITY] from OUT_SCRIPTS, ITEM_INGREDIENTS, ITEMS" +
                     " where OUT_SCRIPTS.DATE between #"+ fromDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "# AND #"+
                     toDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "# AND OUT_SCRIPTS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID" +
-                    " AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID;";
+                    " AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID" +
+                    "order by ITEMS.NAME;";
                 review.Connection = conn;
                 conn.Open();
                 using (OleDbDataReader reader = review.ExecuteReader())
@@ -186,7 +187,7 @@ namespace PharmY
                     "where DATES_ADDED.DATE between #" + fromDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "# AND #"+ toDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "#"+" " +
                     "AND DATES_ADDED.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID " +
                     "group by DATES_ADDED.BARCODE_ID,DATES_ADDED.DATE, ITEM_INGREDIENTS.INGREDIENT_ID,ITEMS.NAME " +
-                    "order by DATES_ADDED.DATE; ";
+                    "order by  ITEMS.NAME; ";
                 review.Connection = conn;
                 conn.Open();
                 using (OleDbDataReader reader = review.ExecuteReader())
@@ -227,7 +228,7 @@ namespace PharmY
 
             int totalLines = review_lines.Count;
             XUnit top1 = helper.GetLinePosition(headerFontSize + 5, headerFontSize);
-            helper.Gfx.DrawString("Out Review", fontHeader, XBrushes.Black, left, top1, XStringFormats.TopLeft);
+            helper.Gfx.DrawString("In Review", fontHeader, XBrushes.Black, left, top1, XStringFormats.TopLeft);
             for (int line = 0; line < totalLines; ++line)
             {
                 XUnit top = helper.GetLinePosition(normalFontSize + 2, normalFontSize);
@@ -235,7 +236,7 @@ namespace PharmY
             }
 
             // Save the document... 
-            const string filename = "review.pdf";
+            const string filename = "inreview.pdf";
             document.Save(filename);
             // ...and start a viewer.
             Process.Start(filename);
