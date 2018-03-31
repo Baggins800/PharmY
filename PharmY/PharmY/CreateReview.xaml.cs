@@ -111,7 +111,7 @@ namespace PharmY
                     " where OUT_SCRIPTS.DATE between #"+ fromDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "# AND #"+
                     toDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "# AND OUT_SCRIPTS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID" +
                     " AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID" +
-                    "order by ITEMS.NAME;";
+                    " order by ITEMS.NAME;";
                 review.Connection = conn;
                 conn.Open();
                 using (OleDbDataReader reader = review.ExecuteReader())

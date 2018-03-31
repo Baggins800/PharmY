@@ -39,12 +39,21 @@ namespace PharmY
         {
             using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["PharmY"].ConnectionString))
             {
+                OleDbCommand remove_ingredient_link = new OleDbCommand();
+                remove_ingredient_link.CommandType = CommandType.Text;
+                remove_ingredient_link.CommandText = "delete * from ITEM_INGREDIENTS where [INGREDIENT_ID] = ?;";
+                remove_ingredient_link.Parameters.AddWithValue("@INGREDIENT_ID", edtactivename.Text.ToUpper());
+                remove_ingredient_link.Connection = conn;
+  
                 OleDbCommand remove_ingredient = new OleDbCommand();
                 remove_ingredient.CommandType = CommandType.Text;
-                remove_ingredient.CommandText = "delete * from ACTIVE_INGREDIENTS where [INGREDIENT_ID]=?;";
+                remove_ingredient.CommandText = "delete * from ACTIVE_INGREDIENTS where [INGREDIENT_ID] = ?;";
                 remove_ingredient.Parameters.AddWithValue("@INGREDIENT_ID", edtactivename.Text.ToUpper());
                 remove_ingredient.Connection = conn;
                 conn.Open();
+                try { remove_ingredient_link.ExecuteNonQuery(); }
+                catch (Exception enq) { MessageBox.Show(enq.Message); }
+
                 try { remove_ingredient.ExecuteNonQuery(); }
                 catch (Exception enq) { MessageBox.Show(enq.Message); }
             }

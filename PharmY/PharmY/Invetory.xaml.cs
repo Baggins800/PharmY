@@ -57,29 +57,30 @@ namespace PharmY
             {
                 OleDbCommand review = new OleDbCommand();
                 review.CommandType = CommandType.Text;
-                review.CommandText = "select T1.NSN, T1.ACTIVE, T1.NAME, cStr(T2.QUANTITY -  T1.QUANTITY)" +
-                    " from (SELECT ITEM_INGREDIENTS.INGREDIENT_ID as [NSN], ACTIVE_INGREDIENTS.INGREDIENT_NAME as [ACTIVE], " +
-                    "ITEMS.NAME as [NAME], sum(OUT_SCRIPTS.QUANTITY) as [QUANTITY] from OUT_SCRIPTS, ITEM_INGREDIENTS, ITEMS, " +
-                    "ACTIVE_INGREDIENTS where OUT_SCRIPTS.DATE between #01/01/1991# AND #" + toDate.SelectedDate.Value.ToString("dd/MM/yyyy") +
-                    "# AND OUT_SCRIPTS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID AND" +
-                    " ACTIVE_INGREDIENTS.INGREDIENT_ID= ITEM_INGREDIENTS.INGREDIENT_ID group by ITEM_INGREDIENTS.INGREDIENT_ID, " +
-                    "ACTIVE_INGREDIENTS.INGREDIENT_NAME, ITEMS.NAME) as T1, (SELECT ITEM_INGREDIENTS.INGREDIENT_ID as [NSN], " +
-                    "ACTIVE_INGREDIENTS.INGREDIENT_NAME as [ACTIVE], ITEMS.NAME as [NAME], sum(DATES_ADDED.QUANTITY) as [QUANTITY] " +
-                    "from DATES_ADDED, ITEM_INGREDIENTS, ITEMS, ACTIVE_INGREDIENTS where DATES_ADDED.DATE between #01/01/1991# AND #" +
-                    toDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "# AND DATES_ADDED.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID AND" +
-                    " ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID AND ACTIVE_INGREDIENTS.INGREDIENT_ID= ITEM_INGREDIENTS.INGREDIENT_ID" +
-                    " group by ITEM_INGREDIENTS.INGREDIENT_ID, ACTIVE_INGREDIENTS.INGREDIENT_NAME, ITEMS.NAME) as T2 where T1.NSN = T2.NSN " +
-                    "and T1.NAME = T2.NAME"+
-                    "order by ACTIVE_INGREDIENTS.INGREDIENT_NAME ; ";
-                review.Connection = conn;
+
+                review.CommandText = "SELECT  T2.NSN,  T2.BARCODE_ID, T2.ACTIVE, T2.NAME, cStr(IIF(IsNull(T2.QUANTITY), 0, T2.QUANTITY) -  IIF(IsNull(T1.QUANTITY), 0, T1.QUANTITY)) as QUANTITY " +
+                    "FROM (SELECT ITEM_INGREDIENTS.INGREDIENT_ID as [NSN], ACTIVE_INGREDIENTS.INGREDIENT_NAME as [ACTIVE], ITEMS.NAME as [NAME], " +
+                    "sum(OUT_SCRIPTS.QUANTITY) as [QUANTITY], OUT_SCRIPTS.BARCODE_ID as BARCODE_ID from OUT_SCRIPTS, ITEM_INGREDIENTS, ITEMS, " +
+                    "ACTIVE_INGREDIENTS where OUT_SCRIPTS.DATE between #01/01/1970# AND #" + toDate.SelectedDate.Value.ToString("dd/MM/yyyy") + 
+                    "# AND OUT_SCRIPTS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID " +
+                    "AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID AND ACTIVE_INGREDIENTS.INGREDIENT_ID= ITEM_INGREDIENTS.INGREDIENT_ID " +
+                    "group by ITEM_INGREDIENTS.INGREDIENT_ID, ACTIVE_INGREDIENTS.INGREDIENT_NAME, ITEMS.NAME, OUT_SCRIPTS.BARCODE_ID)  AS T1 " +
+                    "right join (SELECT ITEM_INGREDIENTS.INGREDIENT_ID as [NSN], ACTIVE_INGREDIENTS.INGREDIENT_NAME as [ACTIVE], ITEMS.NAME as [NAME], " +
+                    "sum(DATES_ADDED.QUANTITY) as [QUANTITY], DATES_ADDED.BARCODE_ID as BARCODE_ID from DATES_ADDED, ITEM_INGREDIENTS, ITEMS, ACTIVE_INGREDIENTS " +
+                    "where DATES_ADDED.DATE between #01/01/1970# AND #" +
+                    toDate.SelectedDate.Value.ToString("dd/MM/yyyy") + "# AND DATES_ADDED.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID " +
+                    "AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID AND ACTIVE_INGREDIENTS.INGREDIENT_ID= ITEM_INGREDIENTS.INGREDIENT_ID " +
+                    "group by ITEM_INGREDIENTS.INGREDIENT_ID, ACTIVE_INGREDIENTS.INGREDIENT_NAME, ITEMS.NAME, DATES_ADDED.BARCODE_ID)  AS T2 " +
+                    "on T1.BARCODE_ID=[T2].[BARCODE_ID] ORDER BY T2.ACTIVE; ";
+                review.Connection = conn; 
                 conn.Open();
                 using (OleDbDataReader reader = review.ExecuteReader())
                     while (reader.Read())
                     {
-                        review_active.Add(reader.GetString(1));
+                        review_active.Add(reader.GetString(2));
                         review_nsn.Add(reader.GetString(0));
-                        review_name.Add(reader.GetString(2));
-                        review_quantity.Add(reader.GetString(3));
+                        review_name.Add(reader.GetString(3));
+                        review_quantity.Add(reader.GetString(4));
                     }
             }
             int max_active = 0, max_nsn = 0, max_name = 0;
@@ -97,10 +98,15 @@ namespace PharmY
                 string b = review_nsn[i].PadRight(max_nsn + spacing, ' ');
                 string c = review_name[i].PadRight(max_name + spacing, ' ');
                 string d = review_quantity[i];
-                if (a.Length > max_len) a = a.Truncate(max_len);
-                if (b.Length > max_len) b = b.Truncate(max_len);
-                if (c.Length > max_len) c = c.Truncate(max_len);
-                if (d.Length > max_len) d = d.Truncate(max_len);
+                if (a.Length > max_len ) a = a.Truncate(max_len );
+                if (b.Length > max_len) b = b.Truncate(max_len );
+                if (c.Length > max_len) c = c.Truncate(max_len );
+                if (d.Length > max_len) d = d.Truncate(max_len );
+
+                if (a.Length == max_len) a = a.PadRight(max_len + spacing, ' ');
+                if (b.Length == max_len) b = b.PadRight(max_len + spacing, ' ');
+                if (c.Length == max_len) c = c.PadRight(max_len + spacing, ' ');
+                if (d.Length == max_len) d = d.PadRight(max_len + spacing, ' ');
                 review_lines.Add(a + b + c + d);
             }
 
@@ -121,7 +127,7 @@ namespace PharmY
 
             int totalLines = review_lines.Count;
             XUnit top1 = helper.GetLinePosition(headerFontSize + 5, headerFontSize);
-            helper.Gfx.DrawString("Out Review", fontHeader, XBrushes.Black, left, top1, XStringFormats.TopLeft);
+            helper.Gfx.DrawString("In store Review", fontHeader, XBrushes.Black, left, top1, XStringFormats.TopLeft);
             for (int line = 0; line < totalLines; ++line)
             {
                 XUnit top = helper.GetLinePosition(normalFontSize + 2, normalFontSize);
@@ -129,7 +135,7 @@ namespace PharmY
             }
 
             // Save the document... 
-            const string filename = "quantity.pdf";
+            const string filename = "instore.pdf";
             document.Save(filename);
             // ...and start a viewer.
             Process.Start(filename);
