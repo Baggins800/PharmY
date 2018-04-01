@@ -12,8 +12,11 @@
         <DatePicker x:Name="toDate" HorizontalAlignment="Center" Margin="501,167,288.6,0" VerticalAlignment="Top" RenderTransformOrigin="1.49,0.615" Width="562" Height="56" FontFamily="Arial" FontSize="36" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846"/>
         <Label Content="From" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="56" Width="126" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F" Margin="329,46,896.6,0"/>
         <Label Content="To" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="56" Width="126" RenderTransformOrigin="0.88,0.512" FontSize="36" Foreground="#FF3D4E3F" Margin="329,0,896.6,463.8"/>
-        <Button x:Name="review_out" Content="Review Out" HorizontalAlignment="Center" Margin="713,437,288.6,175.8" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="Button_Click_1"/>
+        <Button x:Name="detailed_out" Content="Detailed Out" HorizontalAlignment="Center" Margin="713,437,288.6,175.8" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="Button_Click_1"/>
         <Button x:Name="review_in" Content="Review In" HorizontalAlignment="Center" Margin="713,335,288.6,277.8" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="review_in_Click"/>
+        <Button x:Name="btn_ward_a" Content="Ward A" HorizontalAlignment="Center" Margin="196,335,804,277" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="btn_ward_a_Click"/>
+        <Button x:Name="btn_ward_b" Content="Ward B" HorizontalAlignment="Center" Margin="196,437,804,175" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="btn_ward_b_Click"/>
+        <Button x:Name="btn_total_out" Content="Total Out" HorizontalAlignment="Center" Margin="196,543,804,69" VerticalAlignment="Center" Height="75" Width="350" FontFamily="Arial" FontSize="18" Background="#FF98E899" Foreground="#FF3D4E3F" BorderBrush="#FF61C846" Click="btn_total_out_Click"/>
 
     </Grid>
 </Window>
