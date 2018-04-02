@@ -259,7 +259,7 @@ namespace PharmY
                     " where OUT_SCRIPTS.DATE between #" + fromDate.SelectedDate.Value.ToString() + "# AND #" +
                     toDate.SelectedDate.Value.ToString() + "# AND OUT_SCRIPTS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID" + " AND OUT_SCRIPTS.DEPARTMENT_ID =  " + department_id +
                     " AND ITEMS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID" +
-                    " order by OUT_SCRIPTS.DATE;";
+                    " order by OUT_SCRIPTS.DATE,ITEMS.NAME;";
                 review.Connection = conn;
                 conn.Open();
                 using (OleDbDataReader reader = review.ExecuteReader())
@@ -344,7 +344,7 @@ namespace PharmY
                 OleDbCommand review = new OleDbCommand();
                 review.CommandType = CommandType.Text;
 
-                review.CommandText = "SELECT ITEM_INGREDIENTS.INGREDIENT_ID as [NSN], ACTIVE_INGREDIENTS.INGREDIENT_NAME as [ACTIVE], ITEMS.NAME as [NAME], " +
+                review.CommandText = "SELECT ITEM_INGREDIENTS.INGREDIENT_ID as [NSN], ACTIVE_INGREDIENTS.INGREDIENT_NAME as [ACTIVE], left(ITEMS.NAME,255) as [NAME], " +
                     "cStr(sum(OUT_SCRIPTS.QUANTITY)) as [QUANTITY], OUT_SCRIPTS.BARCODE_ID as BARCODE_ID from OUT_SCRIPTS, ITEM_INGREDIENTS, ITEMS, " +
                     "ACTIVE_INGREDIENTS where OUT_SCRIPTS.DATE between #" + fromDate.SelectedDate.Value.ToString() +"# AND #" + toDate.SelectedDate.Value.ToString() +
                     "# AND OUT_SCRIPTS.BARCODE_ID = ITEM_INGREDIENTS.BARCODE_ID " +

@@ -107,7 +107,7 @@ namespace PharmY
                 if (b.Length == max_len) b = b.PadRight(max_len + spacing, ' ');
                 if (c.Length == max_len) c = c.PadRight(max_len + spacing, ' ');
                 if (d.Length == max_len) d = d.PadRight(max_len + spacing, ' ');
-                review_lines.Add(a + b + c + d);
+                review_lines.Add(b + a + c + d);
             }
 
             PdfDocument document = new PdfDocument();
